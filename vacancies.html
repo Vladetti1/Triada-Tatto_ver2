@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вакансии - Студия TRIADA</title>
+    <link rel="stylesheet" href="vacancies.css">
+
+</head>
+<body>
+
+<div class="header" id="header">
+        <img src="images/logo.webp" alt="TRIADA Logo" class="logo-img">
+        <div class="contacts">
+            <div class="dropdown">
+                <span>Контакты</span>
+                <div class="dropdown-content">
+                    <a href="tel:+79029248099" class="tel">8(902) 924-80-99</a>
+                    <a href="https://www.instagram.com/triada_tattoo?igsh=bjU2Ym5obTR3MWFj" target="_blank">Inst</a>
+                    <a href="https://t.me/Triada_tattoo_studio" target="_blank">Tg</a>
+                    <a href="https://vk.com/triada__tattoo" target="_blank">VK</a>
+                </div>
+            </div>
+            <div class="adress">
+                <a href="https://yandex.ru/maps/62/krasnoyarsk/house/novomlinskaya_ulitsa_15/bUsYcQBkSEQEQFtsfXxwdHRqbA==" target="_blank">Адрес</a>
+            </div>
+            <div class="zap">
+                <a href="https://wa.me/+79029248099?text=Здравствуйте!%20Я%20хочу%20записаться%20на%20прием%20в%20студии%20TRIADA!">Записаться</a>
+            </div>
+        </div>
+    </div>
+
+<div class="content">
+
+ <div class="spot" id="spot1">
+    <img src="images/spot1.webp" alt="Пятно 1">
+</div>
+
+<div class="spot" id="spot2">
+    <img src="images/spot2.webp" alt="Пятно 2">
+</div>
+
+<div class="spot" id="spot3">
+    <img src="images/spot3.webp" alt="Пятно 3">
+</div>
+
+<div class="spot" id="spot4">
+    <img src="images/spot4.webp" alt="Пятно 4">
+</div>
+<div class="spot" id="spot5">
+    <img src="images/spot4.webp" alt="Пятно 5">
+</div>
+
+
+
+
+<div class="large-text">Training</div>
+    <h2 style="color: gray;">Если ты тату мастер, который<br>
+ хочет работать в классной <br>
+команде и комфортных условиях,<br>
+ то тебе к нам!</h2>
+<img src="images/team.webp" width="460" height="auto">
+ 
+    <p style="font-size: 21px; color: gray;">Также у нас есть места на аренду:<br>
+на полмесяца 8 000 рублей;<br>
+на месяц 12 000 рублей<br></p>
+<p style="font-size: 21px; color: gray;">Мы предоставим вам:</p>
+<p style="font-size: 21px; color: gray;">Кушетку, холдер и столик;</p>
+<p style="font-size: 21px; color: gray;">Одноразовые расходные материалы;</p>
+<p style="font-size: 21px; color: gray;">Принтер и трансферную бумагу;</p>
+<p style="font-size: 21px; color: gray;">Также для ваших клиентов будут<br> предоставлены одноразовые <br>тапочки, чай, кофе и конфеты.</p>
+
+    <a href="https://wa.me/+79029248099?text=Здравствуйте!%20Я%20хочу%20узнать%20о%20вакансиях%20в%20студии%20TRIADA!" class="button">Хочу работать с Вами!</a>
+</div>
+
+<div>
+    <img src="images/smoke.webp" alt="Smoke"  class="smoke">
+</div>
+
+
+ <script>
+const dropdown = document.querySelector('.dropdown');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+let timer;
+
+dropdown.addEventListener('mouseenter', () => {
+    clearTimeout(timer);
+    dropdownContent.style.display = 'block';
+});
+
+dropdown.addEventListener('mouseleave', () => {
+    timer = setTimeout(() => {
+        dropdownContent.style.display = 'none';
+    }, 500);
+});
+
+dropdownContent.addEventListener('mouseenter', () => {
+    clearTimeout(timer);
+});
+
+dropdownContent.addEventListener('mouseleave', () => {
+    timer = setTimeout(() => {
+        dropdownContent.style.display = 'none';
+    }, 500);
+});
+
+</script>
+
+</body>
+</html>

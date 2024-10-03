@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студия TRIADA</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div class="header" id="header">
+        <img src="images/logo.webp" alt="TRIADA Logo" class="logo-img">
+        <div class="contacts">
+            <div class="dropdown">
+                <span>Контакты</span>
+                <div class="dropdown-content">
+                    <a href="tel:+79029248099" class="tel">8(902) 924-80-99</a>
+                    <a href="https://www.instagram.com/triada_tattoo?igsh=bjU2Ym5obTR3MWFj" target="_blank">Inst</a>
+                    <a href="https://t.me/Triada_tattoo_studio" target="_blank">Tg</a>
+                    <a href="https://vk.com/triada__tattoo" target="_blank">VK</a>
+                </div>
+            </div>
+            <div class="adress">
+                <a href="https://yandex.ru/maps/62/krasnoyarsk/house/novomlinskaya_ulitsa_15/bUsYcQBkSEQEQFtsfXxwdHRqbA==" target="_blank">Адрес</a>
+            </div>
+            <div class="zap">
+                <a href="https://wa.me/+79029248099?text=Здравствуйте!%20Я%20хочу%20записаться%20на%20прием%20в%20студии%20TRIADA!">Записаться</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="logo" id="logo">
+        <img src="images/logo.webp" alt="TRIADA Logo" style="max-width: 100%; height: auto;">
+    </div>
+
+    <div class="main-content" id="main-content">
+       <video id="animation" src="video/anim.MOV" autoplay loop muted></video>
+        <div class="menu">
+            <div>
+                <a href="masters.html" class="glow-on-hover master">Мастера</a>
+                <a href="services.html" class="glow-on-hover service">Услуги</a>
+                <a href="about.html" class="glow-on-hover about">О студии</a>
+                <a href="vacancies.html" class="glow-on-hover vac">Вакансии</a>
+            </div>
+            <div>
+                <a href="https://wa.me/+79029248099?text=Здравствуйте!%20Я%20хочу%20записаться%20на%20прием%20в%20студии%20TRIADA!" class="glow-on-hover contact">Записаться</a>
+                <a href="certificates.html" class="glow-on-hover cert">Подарочные сертификаты</a>
+                <a href="consultation.html" class="glow-on-hover cons">Консультация</a>
+                <a href="care.html" class="glow-on-hover care">Уход за кожей</a>
+                  <a href="educ.html" class="glow-on-hover educ">Обучение</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" id="footer">
+        Triada@все права защищены
+    </div>
+
+    <script>
+        // Показать и скрыть выпадающее меню с задержкой
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        let timer;
+
+        dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+            dropdownContent.style.display = 'block';
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500); // Задержка перед скрытием в миллисекундах
+        });
+
+        dropdownContent.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+        });
+
+        dropdownContent.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500);
+        });
+
+        window.onload = function() {
+            setTimeout(function() {
+              
+                const logo = document.getElementById('logo');
+                logo.style.transition = 'opacity 1s';
+                logo.style.opacity = 0;
+
+        
+                setTimeout(function() {
+                    document.getElementById('logo').style.display = 'none';
+                    document.getElementById('main-content').style.display = 'block';
+                    document.getElementById('header').style.opacity = 1;
+                    document.getElementById('footer').style.opacity = 1;
+                    document.getElementById('header').style.display = 'flex';
+                    document.getElementById('footer').style.display = 'flex';
+                }, 1000);
+            }, 3000);
+        };
+    </script>
+</body>
+</html>

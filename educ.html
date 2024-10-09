@@ -94,7 +94,24 @@
         
 
             <h2 style="font-size: 60px; margin-top: 150px; color: gray;">Выпускники тату-школы</h2>
-            <div class="carousel1-container">
+        <div class="gallery-container"  id="piercing-gallery">
+        <div class="gallery">
+            <img src="images/1c.webp" class="gallery-image" alt="Piercing 1" onclick="openModal('images/1c.webp')">
+            <img src="images/2c.webp" class="gallery-image" alt="Piercing 2" onclick="openModal('images/2c.webp')">
+            <img src="images/3c.webp" class="gallery-image" alt="Piercing 3" onclick="openModal('images/3c.webp')">
+    <img src="images/4c.webp" class="gallery-image" alt="Piercing 4" onclick="openModal('images/4c.webp')">
+            <img src="images/5c.webp" class="gallery-image" alt="Piercing 5" onclick="openModal('images/5c.webp')">
+          
+
+        </div>
+        <img src="images/arrow.webp" class="arrow left-arrow" onclick="prevImage('piercing-gallery')">
+        <img src="images/arrow.webp" class="arrow right-arrow1" onclick="nextImage('piercing-gallery')">
+    </div>
+    
+    
+    
+    
+      <!--      <div class="carousel1-container">
                 <div class="carousel1">
                     <img src="images/1c.webp" alt="Фото 1">
                     <img src="images/2c.webp" alt="Фото 2">
@@ -104,7 +121,7 @@
                 </div>
                <img src="images/arrow.webp" class="arrow arrow-prev" onclick="prevSlide()">
             <img src="images/arrow.webp" class="arrow arrow-next" onclick="nextSlide()">
-            </div>
+            </div> -->
         
 
         <section>
@@ -124,45 +141,77 @@
             <button class="button" style="left: 42%; ">Записаться на обучение</button>
         </section>
 <div class="large-text">Training</div>
-
+     <!-- Модальное окно -->
+    <div id="myModal" class="modal" style="z-index: 100;">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Увеличенное изображение">
+        </div>
+    </div>
+    
+    
+    
+    
 
   
     <script>
-        function toggleDetails() {
-            const details = document.querySelector('.details');
-            details.classList.toggle('hidden');
-        }
+       let currentIndices = {
+           
+            'piercing-gallery': 1,
+           
+        };
 
-        const carousel1 = document.querySelector('.carousel1');
-        const images = carousel1.querySelectorAll('img');
-        let currentIndex = 1;
+        function showImage(galleryId, index) {
+            const galleryContainer = document.getElementById(galleryId);
+            const gallery = galleryContainer.querySelector('.gallery');
+            const images = galleryContainer.querySelectorAll('.gallery-image');
+            if (index >= images.length) {
+                currentIndices[galleryId] = 0;
+            } else if (index < 0) {
+                currentIndices[galleryId] = images.length - 1;
+            } else {
+                currentIndices[galleryId] = index;
+            }
 
-        function showSlides(index) {
-            images.forEach((img, idx) => {
-                img.classList.remove('active', 'prev', 'next', 'hidden');
-                if (idx === index) {
-                    img.classList.add('active');
-                } else if (idx === (index - 1 + images.length) % images.length) {
-                    img.classList.add('prev');
-                } else if (idx === (index + 1) % images.length) {
-                    img.classList.add('next');
+            const offset = -(currentIndices[galleryId] - 1) * (100 / 3); 
+            gallery.style.transform = `translateX(${offset}%)`;
+
+            images.forEach((img, i) => {
+                if (i === currentIndices[galleryId]) {
+                    img.style.transform = 'scale(1.2)';
+                    img.style.opacity = '1';
                 } else {
-                    img.classList.add('hidden');
+                    img.style.transform = 'scale(1)';
+                    img.style.opacity = '0.5';
                 }
             });
         }
 
-        function prevSlide() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            showSlides(currentIndex);
+        function nextImage(galleryId) {
+            showImage(galleryId, currentIndices[galleryId] + 1);
         }
 
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % images.length;
-            showSlides(currentIndex);
+        function prevImage(galleryId) {
+            showImage(galleryId, currentIndices[galleryId] - 1);
         }
 
-        showSlides(currentIndex);
+        // Функция для открытия модального окна
+        function openModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('myModal').style.display = "flex";
+        }
+
+        // Функция для закрытия модального окна
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        // Показываем начальные изображения
+        showImage('piercing-gallery', currentIndices['piercing-gallery']);
+        
+        
+        
+        
 
 // Показать и скрыть выпадающее меню с задержкой
         const dropdown = document.querySelector('.dropdown');

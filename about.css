@@ -1,6 +1,6 @@
 
 
-
+@media (min-width: 1024px) {
 .spot {
     position: absolute;
     z-index: -1; /*  z-index, чтобы изображения пятен находились ниже текста и других элементов */
@@ -312,7 +312,12 @@ font-size: 25px;
 top: 20px;
 color: gray;
         }
-
+    .text-block p {
+    font-size: 21px;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 10px; /* Добавляем отступ между абзацами */
+}
         .reasons {
             text-align: left;
             margin-top: 20px;
@@ -322,3 +327,1316 @@ color: gray;
 list-style: none;
 color: gray;
         }
+    
+    .reasons h3 {
+    font-size: 21px;
+    margin-left: 20px;
+}
+
+.reasons ul li {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+    
+    
+}
+
+
+
+
+@media (max-width: 327px) and (min-width: 0px)  {
+      /* Скрываем ненужные элементы */
+     .spot, .large-text{
+        display: none;
+    }
+    
+@font-face {
+            font-family: 'ExyleC';
+            src: url('exylec.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Copperplate';
+            src: url('copperplate.otf') format('truetype');
+        }
+
+@font-face {
+            font-family: 'Virginia';
+            src: url('Virginia.ttf') format('truetype');
+        }
+    
+ 
+
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #808080;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Центрируем все элементы */
+        padding-left: 8px;
+        padding-right: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        color: #000;
+        font-family: 'ExyleC';
+        font-size: 50px; /* Уменьшаем шрифт для мобильных */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .header img {
+
+        margin-right: 10px; /* Добавляем небольшой отступ справа */
+      transform: translateX(-25%); /* Сдвигаем влево */
+        width: 50%;
+    }
+
+    .header .contact1 {
+        display: flex;
+        flex-direction: column; /* Вертикальное выравнивание */
+        margin-left: 0;
+        align-items: center; /* Центрируем контактные данные */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .header .contact1 a {
+        margin: 2px 0; /* Уменьшаем отступы между ссылками */
+        color: #000;
+        
+    }
+
+    .header .adress,
+    .header .zap {
+        display: none;
+        margin-left: 12%;
+        text-align: center; /* Центрируем текст */
+    }
+
+    .small-logo {
+        top: 10px;
+        left: 50%; /* Центрируем логотип */
+        transform: translateX(-50%); /* Смещаем его ровно в центр */
+        width: 30px; /* Уменьшаем размер логотипа */
+    }
+    
+    
+    
+  .contacts {
+        display: flex;
+        flex-direction:row; /* Вертикальное выравнивание */
+        align-items: center;    /* Центрируем элементы */
+        margin-top: 0px;
+      font-size: 30px;
+      transform: translateX(50%);
+    }
+
+    .dropdown {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto; /* Центрируем dropdown */
+        width: 100%;
+        transform: translateX(-32%); /* Сдвиг влево на 30% */
+    }
+
+    .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000; 
+            min-width: 3px;
+            box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 3px;
+        transform: translateX(0%);
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 10px 15px; /* Уменьшаем отступы для удобства на мобильных */
+        text-align: center; /* Центрируем текст внутри ссылок */
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1; /* Цвет фона при наведении */
+    }
+
+    .contacts .adress a,
+    .contacts .zap a {
+        color: #000000;
+        text-decoration: none;
+        margin: 5px 0; /* Отступы между элементами */
+        text-align: center; /* Центрируем ссылки */
+        display: block; /* Блоковые элементы для вертикального отображения */
+    }
+      
+    
+    
+    
+       .smoke-background {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 300%;
+    height: 60%;
+    background: url('images/smoke3.webp') no-repeat bottom center;
+    background-size: cover;
+    z-index: -1; 
+           transform: translate(3, -30%);
+}
+
+
+       
+
+        .content img {
+        
+            cursor: pointer;
+            max-width: 40%; 
+            height: auto;
+            transition: all 0.5s ease;
+            filter: grayscale(100%);
+            transform: translate(70%, 115%);
+            z-index: :10;
+        }
+
+        .content video {
+            display: none;
+            cursor: pointer;
+            max-width: 90%;
+            height: auto;
+            
+                transform: translate(6%, 110%);
+        }
+
+        .overlay-image {
+           
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10%;
+            height: 5%;
+            background: url('images/overlay.webp') no-repeat center center;
+            background-size: cover;
+            opacity: 0.5;
+            pointer-events: none;
+            transform: translate(-70%, 60%);
+            border-radius: 20%; /* Скругление изображения */
+        }
+
+       
+
+    
+    
+    
+    
+    
+    
+
+
+          
+    
+    
+#back-arrow {
+    
+    display: none; /* Стрелка скрыта по умолчанию */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white; /* Цвет стрелки */
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный фон */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.large-text {
+     display:none;
+    font-family: 'Virginia';
+    font-size: 5vw; 
+    color: #00FFCC; 
+position: absolute;
+ top: 80%;
+    right: 78vw;
+    transform: rotate(90deg); 
+  
+    z-index: -11; 
+    transform: translateY(-50%) rotate(-90deg); /* Центрирование по вертикали и поворот текста */
+/* Чтобы текст не переносился на другую строку */
+white-space: nowrap;
+
+}
+
+
+
+        .image-container {
+           
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+        .image-container img {
+            
+            position: absolute;
+            max-width: 380%;
+            height: auto;
+        }
+
+        .image2 {
+       
+            left: 680px; 
+            top: -250px; 
+            z-index: 2; 
+            width: 1000px; 
+            height: auto; 
+        }
+
+        body {
+            
+           font-family: 'Copperplate';
+            background: black;
+            color: #fff;
+            margin: 0;
+          
+         
+            height: 100vh;
+          
+            padding-top: 60px; 
+        }
+
+
+
+        .text-block {
+            
+            text-align: left;
+            max-width: 750px; 
+            margin-left: 50px;
+            position: static;
+top: -120px;
+color: gray;
+            z-index: -1;
+            margin-top: -150px;
+        }
+    .text-block p {
+        
+    font-size: 10px;
+    text-align: center;
+    margin-left: -30px;
+    margin-top: -10px; /* Добавляем отступ между абзацами */
+}
+        .reasons {
+            
+            text-align: left;
+            margin-top: 200px;
+color: gray;
+        }
+ .reasons ul {
+list-style: none;
+color: gray;
+        }
+    
+    .reasons h3 {
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+.reasons ul li {
+    font-size: 9px;
+    margin-bottom: 10px;
+}
+    
+    
+    
+    
+}
+
+
+
+
+
+
+@media (max-width: 400px) and (min-width: 328px)  {
+      /* Скрываем ненужные элементы */
+     .spot, .large-text{
+        display: none;
+    }
+    
+@font-face {
+            font-family: 'ExyleC';
+            src: url('exylec.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Copperplate';
+            src: url('copperplate.otf') format('truetype');
+        }
+
+@font-face {
+            font-family: 'Virginia';
+            src: url('Virginia.ttf') format('truetype');
+        }
+    
+ 
+
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #808080;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Центрируем все элементы */
+        padding-left: 8px;
+        padding-right: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        color: #000;
+        font-family: 'ExyleC';
+        font-size: 50px; /* Уменьшаем шрифт для мобильных */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .header img {
+
+        margin-right: 10px; /* Добавляем небольшой отступ справа */
+      transform: translateX(-25%); /* Сдвигаем влево */
+        width: 50%;
+    }
+
+    .header .contact1 {
+        display: flex;
+        flex-direction: column; /* Вертикальное выравнивание */
+        margin-left: 0;
+        align-items: center; /* Центрируем контактные данные */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .header .contact1 a {
+        margin: 2px 0; /* Уменьшаем отступы между ссылками */
+        color: #000;
+        
+    }
+
+    .header .adress,
+    .header .zap {
+        display: none;
+        margin-left: 12%;
+        text-align: center; /* Центрируем текст */
+    }
+
+    .small-logo {
+        top: 10px;
+        left: 50%; /* Центрируем логотип */
+        transform: translateX(-50%); /* Смещаем его ровно в центр */
+        width: 30px; /* Уменьшаем размер логотипа */
+    }
+    
+    
+    
+  .contacts {
+        display: flex;
+        flex-direction:row; /* Вертикальное выравнивание */
+        align-items: center;    /* Центрируем элементы */
+        margin-top: 0px;
+      font-size: 30px;
+      transform: translateX(50%);
+    }
+
+    .dropdown {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto; /* Центрируем dropdown */
+        width: 100%;
+        transform: translateX(-32%); /* Сдвиг влево на 30% */
+    }
+
+    .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000; 
+            min-width: 3px;
+            box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 3px;
+        transform: translateX(0%);
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 10px 15px; /* Уменьшаем отступы для удобства на мобильных */
+        text-align: center; /* Центрируем текст внутри ссылок */
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1; /* Цвет фона при наведении */
+    }
+
+    .contacts .adress a,
+    .contacts .zap a {
+        color: #000000;
+        text-decoration: none;
+        margin: 5px 0; /* Отступы между элементами */
+        text-align: center; /* Центрируем ссылки */
+        display: block; /* Блоковые элементы для вертикального отображения */
+    }
+      
+    
+    
+    
+       .smoke-background {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 300%;
+    height: 60%;
+    background: url('images/smoke3.webp') no-repeat bottom center;
+    background-size: cover;
+    z-index: -1; 
+           transform: translate(3, -30%);
+}
+
+
+       
+
+        .content img {
+        
+            cursor: pointer;
+            max-width: 40%; 
+            height: auto;
+            transition: all 0.5s ease;
+            filter: grayscale(100%);
+            transform: translate(70%, 70%);
+            z-index: :10;
+        }
+
+        .content video {
+            display: none;
+            cursor: pointer;
+            max-width: 85%;
+            height: auto;
+            
+                transform: translate(10%, 65%);
+        }
+
+        .overlay-image {
+           
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10%;
+            height: 5%;
+            background: url('images/overlay.webp') no-repeat center center;
+            background-size: cover;
+            opacity: 0.5;
+            pointer-events: none;
+            transform: translate(-70%, -20%);
+            border-radius: 20%; /* Скругление изображения */
+        }
+
+       
+
+    
+    
+    
+    
+    
+    
+
+
+          
+    
+    
+#back-arrow {
+    
+    display: none; /* Стрелка скрыта по умолчанию */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white; /* Цвет стрелки */
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный фон */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.large-text {
+     display:none;
+    font-family: 'Virginia';
+    font-size: 5vw; 
+    color: #00FFCC; 
+position: absolute;
+ top: 80%;
+    right: 78vw;
+    transform: rotate(90deg); 
+  
+    z-index: -11; 
+    transform: translateY(-50%) rotate(-90deg); /* Центрирование по вертикали и поворот текста */
+/* Чтобы текст не переносился на другую строку */
+white-space: nowrap;
+
+}
+
+
+
+        .image-container {
+           
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+        .image-container img {
+            
+            position: absolute;
+            max-width: 380%;
+            height: auto;
+        }
+
+        .image2 {
+       
+            left: 680px; 
+            top: -250px; 
+            z-index: 2; 
+            width: 1000px; 
+            height: auto; 
+        }
+
+        body {
+            
+           font-family: 'Copperplate';
+            background: black;
+            color: #fff;
+            margin: 0;
+          
+         
+            height: 100vh;
+          
+            padding-top: 60px; 
+        }
+
+
+
+        .text-block {
+            
+            text-align: left;
+            max-width: 750px; 
+            margin-left: 50px;
+            position: static;
+top: -120px;
+color: gray;
+            z-index: -1;
+            margin-top: -180px;
+        }
+    .text-block p {
+        
+    font-size: 10px;
+    text-align: center;
+    margin-left: -30px;
+    margin-top: -10px; /* Добавляем отступ между абзацами */
+}
+        .reasons {
+            
+            text-align: left;
+            margin-top: 200px;
+color: gray;
+        }
+ .reasons ul {
+list-style: none;
+color: gray;
+        }
+    
+    .reasons h3 {
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+.reasons ul li {
+    font-size: 9px;
+    margin-bottom: 10px;
+}
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 405px) and (min-width: 401px)  {
+      /* Скрываем ненужные элементы */
+     .spot, .large-text{
+        display: none;
+    }
+    
+@font-face {
+            font-family: 'ExyleC';
+            src: url('exylec.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Copperplate';
+            src: url('copperplate.otf') format('truetype');
+        }
+
+@font-face {
+            font-family: 'Virginia';
+            src: url('Virginia.ttf') format('truetype');
+        }
+    
+ 
+
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #808080;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Центрируем все элементы */
+        padding-left: 8px;
+        padding-right: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        color: #000;
+        font-family: 'ExyleC';
+        font-size: 50px; /* Уменьшаем шрифт для мобильных */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .header img {
+
+        margin-right: 10px; /* Добавляем небольшой отступ справа */
+      transform: translateX(-25%); /* Сдвигаем влево */
+        width: 50%;
+    }
+
+    .header .contact1 {
+        display: flex;
+        flex-direction: column; /* Вертикальное выравнивание */
+        margin-left: 0;
+        align-items: center; /* Центрируем контактные данные */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .header .contact1 a {
+        margin: 2px 0; /* Уменьшаем отступы между ссылками */
+        color: #000;
+        
+    }
+
+    .header .adress,
+    .header .zap {
+        display: none;
+        margin-left: 12%;
+        text-align: center; /* Центрируем текст */
+    }
+
+    .small-logo {
+        top: 10px;
+        left: 50%; /* Центрируем логотип */
+        transform: translateX(-50%); /* Смещаем его ровно в центр */
+        width: 30px; /* Уменьшаем размер логотипа */
+    }
+    
+    
+    
+  .contacts {
+        display: flex;
+        flex-direction:row; /* Вертикальное выравнивание */
+        align-items: center;    /* Центрируем элементы */
+        margin-top: 0px;
+      font-size: 30px;
+      transform: translateX(50%);
+    }
+
+    .dropdown {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto; /* Центрируем dropdown */
+        width: 100%;
+        transform: translateX(-32%); /* Сдвиг влево на 30% */
+    }
+
+    .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000; 
+            min-width: 3px;
+            box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 3px;
+        transform: translateX(0%);
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 10px 15px; /* Уменьшаем отступы для удобства на мобильных */
+        text-align: center; /* Центрируем текст внутри ссылок */
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1; /* Цвет фона при наведении */
+    }
+
+    .contacts .adress a,
+    .contacts .zap a {
+        color: #000000;
+        text-decoration: none;
+        margin: 5px 0; /* Отступы между элементами */
+        text-align: center; /* Центрируем ссылки */
+        display: block; /* Блоковые элементы для вертикального отображения */
+    }
+      
+    
+    
+    
+       .smoke-background {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 300%;
+    height: 60%;
+    background: url('images/smoke3.webp') no-repeat bottom center;
+    background-size: cover;
+    z-index: -1; 
+           transform: translate(3, -30%);
+}
+
+
+       
+
+        .content img {
+        
+            cursor: pointer;
+            max-width: 40%; 
+            height: auto;
+            transition: all 0.5s ease;
+            filter: grayscale(100%);
+            transform: translate(70%, 70%);
+            z-index: :10;
+        }
+
+        .content video {
+            display: none;
+            cursor: pointer;
+            max-width: 85%;
+            height: auto;
+            
+                transform: translate(10%, 65%);
+        }
+
+        .overlay-image {
+           
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10%;
+            height: 5%;
+            background: url('images/overlay.webp') no-repeat center center;
+            background-size: cover;
+            opacity: 0.5;
+            pointer-events: none;
+            transform: translate(-70%, -20%);
+            border-radius: 20%; /* Скругление изображения */
+        }
+
+       
+
+    
+    
+    
+    
+    
+    
+
+
+          
+    
+    
+#back-arrow {
+    
+    display: none; /* Стрелка скрыта по умолчанию */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white; /* Цвет стрелки */
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный фон */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.large-text {
+     display:none;
+    font-family: 'Virginia';
+    font-size: 5vw; 
+    color: #00FFCC; 
+position: absolute;
+ top: 80%;
+    right: 78vw;
+    transform: rotate(90deg); 
+  
+    z-index: -11; 
+    transform: translateY(-50%) rotate(-90deg); /* Центрирование по вертикали и поворот текста */
+/* Чтобы текст не переносился на другую строку */
+white-space: nowrap;
+
+}
+
+
+
+        .image-container {
+           
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+        .image-container img {
+            
+            position: absolute;
+            max-width: 380%;
+            height: auto;
+        }
+
+        .image2 {
+       
+            left: 680px; 
+            top: -250px; 
+            z-index: 2; 
+            width: 1000px; 
+            height: auto; 
+        }
+
+        body {
+            
+           font-family: 'Copperplate';
+            background: black;
+            color: #fff;
+            margin: 0;
+          
+         
+            height: 100vh;
+          
+            padding-top: 60px; 
+        }
+
+
+
+        .text-block {
+            
+            text-align: left;
+            max-width: 750px; 
+            margin-left: 50px;
+            position: static;
+top: -120px;
+color: gray;
+            z-index: -1;
+            margin-top: -180px;
+        }
+    .text-block p {
+        
+    font-size: 10px;
+    text-align: center;
+    margin-left: -30px;
+    margin-top: -10px; /* Добавляем отступ между абзацами */
+}
+        .reasons {
+            
+            text-align: left;
+            margin-top: 200px;
+color: gray;
+        }
+ .reasons ul {
+list-style: none;
+color: gray;
+        }
+    
+    .reasons h3 {
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+.reasons ul li {
+    font-size: 9px;
+    margin-bottom: 10px;
+}
+    
+    
+    
+    
+}
+
+
+
+
+
+@media (max-width: 442px) and (min-width: 406px)  {
+      /* Скрываем ненужные элементы */
+     .spot, .large-text{
+        display: none;
+    }
+    
+@font-face {
+            font-family: 'ExyleC';
+            src: url('exylec.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Copperplate';
+            src: url('copperplate.otf') format('truetype');
+        }
+
+@font-face {
+            font-family: 'Virginia';
+            src: url('Virginia.ttf') format('truetype');
+        }
+    
+ 
+
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #808080;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Центрируем все элементы */
+        padding-left: 8px;
+        padding-right: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        color: #000;
+        font-family: 'ExyleC';
+        font-size: 50px; /* Уменьшаем шрифт для мобильных */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .header img {
+
+        margin-right: 10px; /* Добавляем небольшой отступ справа */
+      transform: translateX(-25%); /* Сдвигаем влево */
+        width: 50%;
+    }
+
+    .header .contact1 {
+        display: flex;
+        flex-direction: column; /* Вертикальное выравнивание */
+        margin-left: 0;
+        align-items: center; /* Центрируем контактные данные */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .header .contact1 a {
+        margin: 2px 0; /* Уменьшаем отступы между ссылками */
+        color: #000;
+        
+    }
+
+    .header .adress,
+    .header .zap {
+        display: none;
+        margin-left: 12%;
+        text-align: center; /* Центрируем текст */
+    }
+
+    .small-logo {
+        top: 10px;
+        left: 50%; /* Центрируем логотип */
+        transform: translateX(-50%); /* Смещаем его ровно в центр */
+        width: 30px; /* Уменьшаем размер логотипа */
+    }
+    
+    
+    
+  .contacts {
+        display: flex;
+        flex-direction:row; /* Вертикальное выравнивание */
+        align-items: center;    /* Центрируем элементы */
+        margin-top: 0px;
+      font-size: 30px;
+      transform: translateX(50%);
+    }
+
+    .dropdown {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto; /* Центрируем dropdown */
+        width: 100%;
+        transform: translateX(-32%); /* Сдвиг влево на 30% */
+    }
+
+    .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000; 
+            min-width: 3px;
+            box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 3px;
+        transform: translateX(0%);
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 10px 15px; /* Уменьшаем отступы для удобства на мобильных */
+        text-align: center; /* Центрируем текст внутри ссылок */
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1; /* Цвет фона при наведении */
+    }
+
+    .contacts .adress a,
+    .contacts .zap a {
+        color: #000000;
+        text-decoration: none;
+        margin: 5px 0; /* Отступы между элементами */
+        text-align: center; /* Центрируем ссылки */
+        display: block; /* Блоковые элементы для вертикального отображения */
+    }
+      
+    
+    
+    
+       .smoke-background {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 300%;
+    height: 60%;
+    background: url('images/smoke3.webp') no-repeat bottom center;
+    background-size: cover;
+    z-index: -1; 
+           transform: translate(3, -30%);
+}
+
+
+       
+
+        .content img {
+        
+            cursor: pointer;
+            max-width: 37%; 
+            height: auto;
+            transition: all 0.5s ease;
+            filter: grayscale(100%);
+            transform: translate(84%, 65%);
+            z-index: :10;
+        }
+
+        .content video {
+            display: none;
+            cursor: pointer;
+            max-width: 85%;
+            height: auto;
+            
+                transform: translate(10%, 65%);
+        }
+
+        .overlay-image {
+           
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10%;
+            height: 8%;
+            background: url('images/overlay.webp') no-repeat center center;
+            background-size: cover;
+            opacity: 0.5;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            border-radius: 20%; /* Скругление изображения */
+        }
+
+       
+
+    
+    
+    
+    
+    
+    
+
+
+          
+    
+    
+#back-arrow {
+    
+    display: none; /* Стрелка скрыта по умолчанию */
+    position: absolute;
+    top: 160px;
+    left: 20px;
+    font-size: 10px;
+    cursor: pointer;
+    color: white; /* Цвет стрелки */
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный фон */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.large-text {
+     display:none;
+    font-family: 'Virginia';
+    font-size: 5vw; 
+    color: #00FFCC; 
+position: absolute;
+ top: 80%;
+    right: 78vw;
+    transform: rotate(90deg); 
+  
+    z-index: -11; 
+    transform: translateY(-50%) rotate(-90deg); /* Центрирование по вертикали и поворот текста */
+/* Чтобы текст не переносился на другую строку */
+white-space: nowrap;
+
+}
+
+
+
+        .image-container {
+           
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+        .image-container img {
+            
+            position: absolute;
+            max-width: 380%;
+            height: auto;
+        }
+
+        .image2 {
+       
+            left: 680px; 
+            top: -250px; 
+            z-index: 2; 
+            width: 1000px; 
+            height: auto; 
+        }
+
+        body {
+            
+           font-family: 'Copperplate';
+            background: black;
+            color: #fff;
+            margin: 0;
+          
+         
+            height: 100vh;
+          
+            padding-top: 60px; 
+        }
+
+
+
+        .text-block {
+            
+            text-align: left;
+            max-width: 750px; 
+            margin-left: 50px;
+            position: static;
+top: -120px;
+color: gray;
+            z-index: -1;
+            margin-top: -190px;
+        }
+    .text-block p {
+        
+    font-size: 10px;
+    text-align: center;
+    margin-left: -30px;
+    margin-top: -10px; /* Добавляем отступ между абзацами */
+}
+        .reasons {
+            
+            text-align: left;
+            margin-top: 220px;
+color: gray;
+        }
+ .reasons ul {
+list-style: none;
+color: gray;
+        }
+    
+    .reasons h3 {
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+.reasons ul li {
+    font-size: 9px;
+    margin-bottom: 10px;
+}
+    
+    
+    
+    
+}

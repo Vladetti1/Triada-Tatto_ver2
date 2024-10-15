@@ -1,4 +1,161 @@
 
+@media screen and (max-width: 480px) {
+    
+    .content{
+       
+    }
+  
+    @font-face {
+            font-family: 'ExyleC';
+            src: url('exylec.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Copperplate';
+            src: url('copperplate.otf') format('truetype');
+        }
+
+@font-face {
+            font-family: 'Virginia';
+            src: url('Virginia.ttf') format('truetype');
+        }
+    
+ 
+
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #808080;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Центрируем все элементы */
+        padding-left: 8px;
+        padding-right: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        color: #000;
+        font-family: 'ExyleC';
+        font-size: 50px; /* Уменьшаем шрифт для мобильных */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .header img {
+
+        margin-right: 10px; /* Добавляем небольшой отступ справа */
+      transform: translateX(-25%); /* Сдвигаем влево */
+        width: 50%;
+    }
+
+    .header .contact1 {
+        display: flex;
+        flex-direction: column; /* Вертикальное выравнивание */
+        margin-left: 0;
+        align-items: center; /* Центрируем контактные данные */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .header .contact1 a {
+        margin: 2px 0; /* Уменьшаем отступы между ссылками */
+        color: #000;
+        
+    }
+
+    .header .adress,
+    .header .zap {
+        display: none;
+        margin-left: 12%;
+        text-align: center; /* Центрируем текст */
+    }
+
+    .small-logo {
+        top: 10px;
+        left: 50%; /* Центрируем логотип */
+        transform: translateX(-50%); /* Смещаем его ровно в центр */
+        width: 30px; /* Уменьшаем размер логотипа */
+    }
+    
+    
+    
+  .contacts {
+        display: flex;
+        flex-direction:row; /* Вертикальное выравнивание */
+        align-items: center;    /* Центрируем элементы */
+        margin-top: 0px;
+      font-size: 30px;
+      transform: translateX(50%);
+    }
+
+    .dropdown {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto; /* Центрируем dropdown */
+        width: 100%;
+        transform: translateX(-32%); /* Сдвиг влево на 30% */
+    }
+
+    .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000; 
+            min-width: 3px;
+            box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 3px;
+        transform: translateX(0%);
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 10px 15px; /* Уменьшаем отступы для удобства на мобильных */
+        text-align: center; /* Центрируем текст внутри ссылок */
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1; /* Цвет фона при наведении */
+    }
+
+    .contacts .adress a,
+    .contacts .zap a {
+        color: #000000;
+        text-decoration: none;
+        margin: 5px 0; /* Отступы между элементами */
+        text-align: center; /* Центрируем ссылки */
+        display: block; /* Блоковые элементы для вертикального отображения */
+    }
+    
+    
+    
+    
+    
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+@media (min-width: 1024px) {
+
+
+
         
 .spot {
     position: absolute;
@@ -275,32 +432,4 @@ font-size: 25px;
             50% { background-position: 400% 0; }
             100% { background-position: 0 0; }
         }
-        @media (max-width: 768px) {
-            .menu {
-                flex-direction: column;
-                align-items: center;
-            }
-            .menu a {
-                margin: 10px 0;
-                font-size: 20px;
-            }
-            .header {
-                height: 50px;
-                padding-left: 10px;
-            }
-            .header img {
-                height: 30px;
-            }
-        }
-        @media (max-width: 480px) {
-            .menu a {
-                font-size: 18px;
-            }
-            .header {
-                height: 40px;
-                padding-left: 10px;
-            }
-            .header img {
-                height: 25px;
-            }
-        }
+}

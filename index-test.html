@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студия TRIADA</title>
+    <link rel="stylesheet" href="index-test.css">
+</head>
+<body>
+    <div class="header" id="header" style="opacity: 0;">
+        <img src="images/logo.webp" alt="TRIADA Logo" class="logo-img">
+        <div class="contacts">
+            <div class="dropdown">
+                <span>Контакты</span>
+                <div class="dropdown-content">
+                    <a href="tel:+79029248099" class="tel">8(902) 924-80-99</a>
+                    <a href="https://www.instagram.com/triada_tattoo?igsh=bjU2Ym5obTR3MWFj" target="_blank">Inst</a>
+                    <a href="https://t.me/Triada_tattoo_studio" target="_blank">Tg</a>
+                    <a href="https://vk.com/triada__tattoo" target="_blank">VK</a>
+                </div>
+            </div>
+            <div class="adress">
+                <a href="https://yandex.ru/maps/62/krasnoyarsk/house/novomlinskaya_ulitsa_15/bUsYcQBkSEQEQFtsfXxwdHRqbA==" target="_blank">Адрес</a>
+            </div>
+            <div class="zap">
+                <a href="https://wa.me/+79029248099?text=Здравствуйте!%20Я%20хочу%20записаться%20на%20прием%20в%20студии%20TRIADA!">Записаться</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="video-intro" class="video-intro">
+        <video id="intro-video" src="video/logo.mov" autoplay muted></video>
+        <button id="skip-button" class="skip-button" style="display: none;">Пропустить</button>
+    </div>
+
+    <!-- Основное содержание -->
+    <div class="main-content" id="main-content" style="display: none;">
+       <video id="animation" src="video/anim.MOV" autoplay loop muted></video>
+        <div class="menu">
+            <div>
+                <a href="masters.html" class="glow-on-hover master">Мастера</a>
+                <a href="services.html" class="glow-on-hover service">Услуги</a>
+                <a href="about.html" class="glow-on-hover about">О студии</a>
+                <a href="vacancies.html" class="glow-on-hover vac">Вакансии</a>
+            </div>
+            <div>
+                <a href="https://wa.me/+79029248099?text=Здравствуйте!%20Я%20хочу%20записаться%20на%20прием%20в%20студии%20TRIADA!" class="glow-on-hover contact">Записаться</a>
+                <a href="certificates.html" class="glow-on-hover cert">Подарочные сертификаты</a>
+                <a href="consultation.html" class="glow-on-hover cons">Консультация</a>
+                <a href="care.html" class="glow-on-hover care">Уход за кожей</a>
+                <a href="educ.html" class="glow-on-hover educ">Обучение</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" id="footer" style="opacity: 0;">
+        Triada@все права защищены
+    </div>
+
+   <script>
+        window.onload = function() {
+            const videoIntro = document.getElementById('video-intro');
+            const introVideo = document.getElementById('intro-video');
+            const skipButton = document.getElementById('skip-button');
+            const mainContent = document.getElementById('main-content');
+            const header = document.getElementById('header');
+            const footer = document.getElementById('footer');
+
+            // Проверка, был ли пользователь на сайте ранее
+            const visitedBefore = localStorage.getItem('visitedBefore');
+
+            if (visitedBefore) {
+                // Если пользователь был ранее, показать кнопку пропуска
+                skipButton.style.display = 'block';
+            }
+
+            // Если видео завершилось или нажали на "Пропустить"
+            introVideo.onended = skipAnimation;
+            skipButton.onclick = skipAnimation;
+
+            function skipAnimation() {
+                videoIntro.classList.add('hidden');
+
+                setTimeout(() => {
+                    videoIntro.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    header.style.opacity = 1;
+                    footer.style.opacity = 1;
+                }, 1000);
+
+                // Сохранить информацию о посещении
+                localStorage.setItem('visitedBefore', 'true');
+            }
+        };
+    </script>
+</body>
+</html>
